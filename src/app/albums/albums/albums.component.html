@@ -1,0 +1,9 @@
+<div class="albums-container">
+  <h2>Albums</h2>
+  <button (click)="createAlbum()">Create Album</button>
+  <div *ngFor="let album of albums">
+    <p>{{ album.album }}</p>
+    <button (click)="editAlbum(album)">Edit</button>
+    <button (click)="deleteAlbum(album.idAlbum)">Delete</button>
+  </div>
+</div>
