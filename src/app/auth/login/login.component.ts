@@ -15,10 +15,13 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) { }
 
   login(): void {
-    if (this.authService.login(this.username, this.password)) {
-      this.router.navigate(['/']);
-    } else {
-      this.errorMessage = 'Invalid username or password';
-    }
+    this.authService.login(this.username, this.password).subscribe({
+      next: response => {
+        this.router.navigate(['/']);
+      },
+      error: err => {
+        this.errorMessage = 'Invalid username or password';
+      }
+    });
   }
 }
