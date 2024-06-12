@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="header">
+    <div class="column">ID</div>
+    <div class="column">Country Name</div>
+    <div class="actions">Acciones</div> <!-- Columna para los botones -->
+  </div>
+  <div class="data">
+    <div class="row" *ngFor="let country of displayedCountries">
+      <div class="column left-aligned">{{ country.idCountry }}</div>
+      <div class="column left-aligned">{{ country.countryName }}</div>
+      <div class="actions">
+        <button class="action-button new-button">Nuevo</button>
+        <button class="action-button edit-button">Editar</button>
+        <button class="action-button delete-button">Borrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Paginador fuera de la grilla -->
+<div class="paginator">
+  <button (click)="previousPage()" [disabled]="currentPage === 1" class="paginator-button">Previous</button>
+  <span>{{ currentPage }} / {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="paginator-button">Next</button>
+  <div class="total-records">Total Records: {{ countries.length }}</div>
+</div>

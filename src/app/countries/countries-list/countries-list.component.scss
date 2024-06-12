@@ -1,0 +1,88 @@
+.container {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.column {
+  flex: 1;
+  text-align: left;
+}
+
+.left-aligned {
+  text-align: left; /* Alineación a la izquierda */
+}
+
+.data {
+  padding: 10px 0;
+}
+
+.row {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  align-items: center; /* Alineación vertical al centro */
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.paginator-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.paginator-button:hover {
+  background-color: #0056b3;
+}
+
+.total-records {
+  margin-left: 20px;
+}
+
+.actions {
+  display: flex;
+}
+
+.action-button {
+  background-color: #17a2b8; /* Color diferente para los botones de acción */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.new-button {
+  background-color: #28a745; /* Color diferente para el botón Nuevo */
+}
+
+.edit-button {
+  background-color: #ffc107; /* Color diferente para el botón Editar */
+}
+
+.delete-button {
+  background-color: #dc3545; /* Color diferente para el botón Borrar */
+}

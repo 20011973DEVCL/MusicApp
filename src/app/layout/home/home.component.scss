@@ -1,15 +1,15 @@
 .layout {
-  display: flex;
-  height: 100vh;
+  // height: 100vh;
+  height: 100%;
 }
 
 .content {
-  flex: 1;
   padding: 10px;
+  height: calc(100vh - 56px); // Adjust height considering the toolbar height
+  overflow-y: auto;
 }
 
-.logout {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+mat-toolbar {
+  background-color: #ADD8E6; /* Celeste claro */
+  color: #000000; /* Negro */
 }

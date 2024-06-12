@@ -1,20 +1,11 @@
-export interface Albums {
+export interface Country {
   statusCode:    number;
   successful:    boolean;
   errorMessages: null;
-  result:        AlbumsResult[];
+  result:        CountryResult[];
 }
 
-export interface AlbumsResult {
-  idSinger:          number;
-  singer:            string;
-  fechaInicioSinger: null;
-  idAlbum:           number;
-  album:             string;
-  añoAlbum:          number;
-  notasAlbum:        string;
-  idPais:            string;
-  pais:              string;
-  idGenero:          number;
-  genero:            string;
+export interface CountryResult {
+  idCountry:   string;
+  countryName: string;
 }
