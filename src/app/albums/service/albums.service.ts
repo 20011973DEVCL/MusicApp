@@ -2,12 +2,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Albums } from '../../interfaces/Albums.interface';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlbumsService {
-  private apiUrl = 'http://localhost:5212';
+  private apiUrl = environment.baseUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -16,7 +17,7 @@ export class AlbumsService {
       'Custom-Header': 'HeaderValue'
     });
 
-    return this.http.get<Albums>(`${this.apiUrl}/api/Albums`, { headers });
+    return this.http.get<Albums>(`${this.apiUrl}/api/Albun/GetFilteredResults`, { headers });
   }
 
   getAlbum(id: number): Observable<any> {
@@ -31,7 +32,7 @@ export class AlbumsService {
     return this.http.put<any>(`${this.apiUrl}/${id}`, Albums);
   }
 
-  deleteAlbum(id: string): Observable<any> {
+  deleteAlbum(id: number): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/api/Albums/${id}`);
   }
 }

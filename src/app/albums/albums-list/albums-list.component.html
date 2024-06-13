@@ -1,0 +1,38 @@
+<!-- table.component.html -->
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+
+        <td>idAlbum</td>
+        <td>album</td>
+        <th>Singer</th>
+        <td>añoAlbum</td>
+        <td>notasAlbum</td>
+        <td>genero</td>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let album of albums">
+        <td>{{ album.idAlbum }}</td>
+        <td>{{ album.album }}</td>
+        <td>{{ album.singer }}</td>
+        <td>{{ album.anoAlbum }}</td>
+        <td>{{ album.notasAlbum }}</td>
+        <td>{{ album.genero }}</td>
+        <td>
+          <button class="nuevo" (click)="addAlbums()">Nuevo</button>
+          <button class="editar"(click)="editAlbums(album.idAlbum)">Editar</button>
+          <button class="borrar" (click)="deleteAlbums(album.idAlbum)">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="pagination">
+    <button (click)="previousPage()">Previous</button>
+    <span>{{ currentPage }} / {{ totalPages }}</span>
+    <button (click)="nextPage()">Next</button>
+  </div>
+  <div class="total-records">Total Records: {{ albums.length }}</div>
+</div>

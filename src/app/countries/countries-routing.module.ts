@@ -5,10 +5,9 @@ import { CountriesNewComponent } from './countries-new/countries-new.component';
 import { CountriesListComponent } from './countries-list/countries-list.component';
 
 const routes: Routes = [
-  { path: 'countries', component: CountriesListComponent },
-  { path: 'countries/edit/:id', component: CountriesEditComponent },
-  { path: 'countries/new', component: CountriesNewComponent },
-  { path: '', redirectTo: 'countries' ,pathMatch:'full'}
+  { path: '', component: CountriesListComponent },
+  { path: 'edit/:id', component: CountriesEditComponent },
+  { path: 'new', component: CountriesNewComponent },
 ];
 
 @NgModule({

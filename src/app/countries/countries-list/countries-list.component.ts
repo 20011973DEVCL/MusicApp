@@ -44,11 +44,11 @@ export class CountriesListComponent {
   }
 
   editCountry(id: string): void {
-    this.router.navigate(['/country/edit', id]);
+    this.router.navigate([`/countries/edit/${id}`]);
   }
 
   addCountry(): void {
-    this.router.navigate(['/country/new']);
+    this.router.navigate(['/countries/new']);
   }
 
   deleteCountry(id: string): void {

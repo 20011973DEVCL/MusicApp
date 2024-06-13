@@ -11,12 +11,27 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: 'albums', loadChildren: () => import('./albums/albums.module').then(m => m.AlbumsModule) },
-      { path: 'countries', loadChildren: () => import('./countries/countries.module').then(m => m.CountriesModule) },
-      { path: 'singers', loadChildren: () => import('./singers/singers.module').then(m => m.SingersModule) },
-      { path: 'music-genre', loadChildren: () => import('./music-genre/music-genre.module').then(m => m.MusicGenreModule) },
-      { path: 'songs', loadChildren: () => import('./songs/songs.module').then(m => m.SongsModule) },
-      { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) }
+      {
+        path: 'albums',
+        loadChildren: () => import('./albums/albums.module').then(m => m.AlbumsModule)
+      },
+      {
+        path: 'countries',
+        loadChildren: () => import('./countries/countries.module').then(m => m.CountriesModule)
+      },
+      {
+        path: 'singers',
+        loadChildren: () => import('./singers/singers.module').then(m => m.SingersModule)
+      },
+      {
+        path: 'music-genre',
+        loadChildren: () => import('./music-genre/music-genre.module').then(m => m.MusicGenreModule) },
+      {
+        path: 'songs',
+        loadChildren: () => import('./songs/songs.module').then(m => m.SongsModule) },
+      {
+        path: 'users',
+        loadChildren: () => import('./users/users.module').then(m => m.UsersModule) }
     ]
   },
   { path: '**', redirectTo: 'login' }

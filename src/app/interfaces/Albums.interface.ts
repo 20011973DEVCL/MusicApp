@@ -11,7 +11,7 @@ export interface AlbumsResult {
   fechaInicioSinger: null;
   idAlbum:           number;
   album:             string;
-  añoAlbum:          number;
+  anoAlbum:          number;
   notasAlbum:        string;
   idPais:            string;
   pais:              string;
